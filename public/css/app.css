@@ -1,0 +1,25 @@
+/* Penyesuaian kecil di atas Tabler */
+:root { --tblr-font-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+div.dt-container { padding: 0; }
+div.dt-container .dt-search input, div.dt-container .dt-length select { display: inline-block; width: auto; }
+.table td, .table th { vertical-align: middle; }
+.item-card { transition: transform .15s ease, box-shadow .15s ease; }
+.item-card:hover { transform: translateY(-2px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.08); }
+.qr-box svg { max-width: 100%; height: auto; }
+@media print {
+    .navbar, .page-header .btn-list, .d-print-none, footer { display: none !important; }
+    .page-wrapper { margin: 0 !important; }
+}
+
+/* DataTables: rata kiri untuk kolom angka/tanggal agar rapi seperti tabel Tabler */
+table.dataTable th.dt-type-numeric, table.dataTable td.dt-type-numeric,
+table.dataTable th.dt-type-date, table.dataTable td.dt-type-date { text-align: left; }
+table.dataTable th.dt-type-numeric div.dt-column-header, table.dataTable th.dt-type-date div.dt-column-header { flex-direction: row; }
+div.dt-container .dt-paging .pagination { margin-bottom: 0; }
+.stat-card .avatar { --tblr-avatar-size: 3rem; }
+.navbar-brand .avatar { flex-shrink: 0; }
+
+.chart-sm { height: 4rem; }
+
+/* Tabel DataTables tidak memecah layout di layar kecil: bisa digeser horizontal */
+div.dt-container .dt-layout-cell.dt-layout-full { overflow-x: auto; }
